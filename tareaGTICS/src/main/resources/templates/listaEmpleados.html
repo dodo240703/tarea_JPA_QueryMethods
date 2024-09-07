@@ -11,6 +11,7 @@
     <table class="table table-striped">
         <thead>
         <tr>
+            <th>#</th>
             <th>Apellido y Nombre</th>
             <th>Correo</th>
             <th>Departamento</th>
@@ -18,8 +19,12 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-
+        <tr th:each="empleado, info :${listaEmployees}">
+            <td th:text="${info.index + 1}"></td>
+            <td th:text="${empleado.lastName + ' ' + empleado.firstName}"></td>
+            <td th:text="${empleado.email}"></td>
+            <td th:text="${empleado.department.nameDepartment}"> </td>
+            <td th:text="${empleado.department.location.cityName}"> </td>
         </tr>
 
         </tbody>
