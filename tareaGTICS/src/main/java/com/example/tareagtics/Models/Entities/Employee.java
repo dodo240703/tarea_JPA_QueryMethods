@@ -30,5 +30,8 @@ public class Employee {
     @JoinColumn(name = "department_id")
     private Department department;  // Relación con Department
 
+    @ManyToOne
+    @JoinColumn(name = "job_id")
+    private Job job;
 
 }
