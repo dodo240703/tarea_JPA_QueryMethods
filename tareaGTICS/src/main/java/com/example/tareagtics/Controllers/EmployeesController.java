@@ -22,6 +22,11 @@ public class EmployeesController {
     final EmployeeRepository employeesRepository;
     final JobRepository employeesJobRepository;
 
+    @GetMapping
+    public String redireccionarListaTmb() {
+        return "redirect:/employee/listar";
+    }
+
     public EmployeesController(EmployeeRepository employeesRepository, JobRepository employeesJobRepository) {
         this.employeesRepository = employeesRepository;
         this.employeesJobRepository = employeesJobRepository;
