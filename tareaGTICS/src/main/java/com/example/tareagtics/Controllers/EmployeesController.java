@@ -22,7 +22,6 @@ public class EmployeesController {
         this.employeesRepository = employeesRepository;
     }
 
-
     @GetMapping("/listar")
     public String showEmployees(Model model) {
         List<Employee> listaEmployees = employeesRepository.findAll();
